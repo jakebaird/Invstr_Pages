@@ -1,0 +1,5 @@
+== Pages Rails Sample
+
+The following will contain a working version of Pages with only core components.
+
+```http://localhost:3000/welcome/index```
