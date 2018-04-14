@@ -22,4 +22,5 @@
 //= require jquery-actual/jquery.actual.min
 //= require jquery-scrollbar/jquery.scrollbar.min
 //= require pages
+//= require autonumeric
 //= require_tree .

@@ -28,12 +28,12 @@
                 <!-- START card -->
                 <div class="card card-transparent">
                   <div class="card-block">
-                    <form id="form-personal" role="form" autocomplete="off">
+                    <%= form_for(@property_invesment_form, url: results_path, method: :post, html: {id: 'form-personal'}) do |f| %>
                       <div class="row clearfix">
                         <div class="col-md-12">
                           <div class="form-group form-group-default required">
                             <label>Property Value</label>
-                            <input type="text" class="form-control" name="firstName" required>
+                            <%= f.text_field :property_value, class: 'form-control', required: true, data: {autonumeric: {mDec: 0}} %>
                           </div>
                         </div>
                       </div>
@@ -41,7 +41,7 @@
                         <div class="col-md-12">
                           <div class="form-group form-group-default">
                             <label>Loan Amount</label>
-                            <input type="text" class="form-control" name="lastName" required>
+                            <%= f.text_field :loan_amount, class: 'form-control', required: true, data: {autonumeric: {mDec: 0}} %>
                           </div>
                         </div>
                       </div>
@@ -50,7 +50,7 @@
                           <div class="form-group form-group-default input-group">
                             <div class="form-input-group">
                               <label>Interest Rate</label>
-                              <input type="text" class="form-control" name="username" placeholder="3.99" required>
+                              <%= f.number_field :interest_rate, class: 'form-control', required: true, placehoder: '3.99', step: 0.01 %>
                             </div>
                             <div class="input-group-addon d-flex ">
                               %
@@ -62,7 +62,7 @@
                           <div class="form-group form-group-default input-group">
                             <div class="form-input-group">
                               <label>Capital Growth</label>
-                              <input type="text" class="form-control" placeholder="3.00" required>
+                              <%= f.number_field :capital_growth, class: 'form-control', required: true, placehoder: '3.00', step: 0.01 %>
                             </div>
                             <div class="input-group-addon d-flex ">
                               %
@@ -75,7 +75,7 @@
                           <div class="form-group form-group-default input-group">
                             <div class="form-input-group">
                               <label>Your Taxable Income</label>
-                              <input type="text" class="form-control" placeholder="$75,000" required>
+                              <%= f.text_field :taxable_income, class: 'form-control', required: true, placehoder: '$75,000', data: {autonumeric: {mDec: 0}} %>
                             </div>
                             <div class="input-group-addon d-flex ">
                               p/a
@@ -89,7 +89,7 @@
                           <div class="form-group form-group-default input-group">
                             <div class="form-input-group">
                               <label>Proposed Rent</label>
-                              <input type="text" class="form-control" name="username" placeholder="400" required>
+                              <%= f.text_field :proposed_rent, class: 'form-control', required: true, placehoder: '400', data: {autonumeric: {mDec: 0}} %>
                             </div>
                             <div class="input-group-addon d-flex ">
                               p/w
@@ -104,8 +104,8 @@
                       </p>
                      
                       <div class="clearfix"></div><p class="pull-right">
-                     <a href ="/results"><button class="btn btn-primary" type="submit"><b>Analyse Property</b></button></a>
-                    </form>
+                     <button class="btn btn-primary" type="submit"><b>Analyse Property</b></button>
+                    <% end %>
                   </div>
                 </div>
                 <!-- END card -->

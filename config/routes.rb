@@ -6,7 +6,7 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
    root 'welcome#index'
-   get '/results' => 'welcome#results'
+   post '/results' => 'welcome#results', as: :results
    get '/terms' => 'welcome#terms'
    get '/privacy' => 'welcome#privacy'
 
