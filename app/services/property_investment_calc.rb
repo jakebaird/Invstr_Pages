@@ -20,7 +20,7 @@ module PropertyInvestmentCalc
 		sheet.save
 		sheet.reload
 
-		data = {repayments: sheet[137,2], cashflow: sheet[140,2], yield: sheet[136,2], equity: sheet[138,2]}
+		data = {repayments: sheet[137,2], cashflow: sheet[140,2], yield: sheet[136,2], equity: sheet[138,2], annual_tax: sheet[70,3]}
 
 		new_file.delete(true)
 		return data
