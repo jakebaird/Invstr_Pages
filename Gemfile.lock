@@ -1,5 +1,5 @@
 GIT
-  remote: https://github.com/revoxltd/pages-rails.git
+  remote: https://madha14@bitbucket.org/madha14/pages-rails.git
   revision: f5e3e595589a530a0d0d32695c7d48e0bba7d795
   specs:
     pages-rails (3.1.0)

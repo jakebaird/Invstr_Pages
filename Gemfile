@@ -22,7 +22,7 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
-gem 'pages-rails' ,:git => 'https://github.com/revoxltd/pages-rails.git'
+gem 'pages-rails' ,:git => 'https://madha14@bitbucket.org/madha14/pages-rails.git'
 gem 'high_voltage', '~> 3.0'
 gem 'google_drive'
 gem 'autonumeric-rails'
