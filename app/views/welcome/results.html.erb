@@ -1,90 +1,103 @@
-<!-- START JUMBOTRON -->
-<div class="jumbotron"  data-pages="parallax" >
-  <div class=" container-fluid container-fixed-lg sm-p-l-0 sm-p-r-0">
-    <div class="inner">
-      <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="#">Analysis</a></li>
-        <li class="breadcrumb-item active">results</li>
-      </ol>
-    </div>
-  </div>
-</div>
-
 <div class=" container-fluid   container-fixed-lg">
-  <div class="card card-transparent">
-    <div class="card-header ">
-      <div class="card-title">Results
-      </div>
-    </div>
-    <div class="card-block">
-      <div class="row">
-        <div class="col-lg-3">
-          <div class="card card-transparent">
-            <div class="card-header ">
-              <div class="card-title">Repayments
+            <div class="card card-transparent">
+              <div class="card-header ">
+                <div class="card-title">Results
+                </div>
+              </div>
+              <div class="card-block">
+                <div class="row">
+                  <div class="col-lg-3">
+                    <div id="card-linear-color" class="card card-default">
+                       <div class="card-header  separator">
+                        <div class="card-title">Repayments
+                        </div>
+                      </div>
+                      <div class="card-block">
+                        <h3>
+                <span class="semi-bold">$<%= @result[:repayments] %> </span> per week</h3>
+                        <p>This is calculated on interest only. If you choose principle and interest, these fuigures will change. We can customise this if you want. Get in touch and we can manually work it out for you.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-3">
+                    <div id="card-circular-color" class="card card-default">
+                      <div class="card-header  separator">
+                        <div class="card-title">Cashflow
+                        </div>
+                      </div>
+                      <div class="card-block">
+                        <h3>
+                <span class="semi-bold">$<%= @result[:cashflow] %></span> per week</h3>
+                        <p>This is how much you'll recieve or need to put in weekly, before tax credits are applied.<br><br><br>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-3">
+                    <div id="card-error" class="card card-default">
+                      <div class="card-header  separator">
+                        <div class="card-title">Yield
+                        </div>
+                      </div>
+                      <div class="card-block">
+                        <h3>
+                        <%= @result[:yield] %></h3>
+                        <p>Your net Rental Yield.<br><br><br><br><br>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-3">
+                    <div id="card-circular-color" class="card card-default">
+                      <div class="card-header  separator">
+                        <div class="card-title">Equity
+                        </div>
+                      </div>
+                      <div class="card-block">
+                        <h3>
+                <span class="semi-bold">$<%= @result[:equity] %></span></h3>
+                        <p>At the end of the first year, this is how much equity the investment property would've created for your portfolio on capital gains alone.<br><br>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
-            <div class="card-block">
-              <h3>
-                <span class="semi-bold">$<%= @result[:repayments] %> pw</span>
-              </h3>
-            </div>
           </div>
-        </div>
-        <div class="col-lg-3">
-          <div class="card card-transparent">
-            <div class="card-header ">
-              <div class="card-title">Cashflow
-              </div>
-            </div>
-            <div class="card-block">
-              <h3>
-                <span class="semi-bold">$<%= @result[:cashflow] %> pw</span>
-              </h3>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-3">
-          <div class="card card-transparent">
-            <div class="card-header ">
-              <div class="card-title">Yield
-              </div>
-            </div>
-            <div class="card-block">
-              <h3>
-                <span class="semi-bold"><%= @result[:yield] %></span>
-              </h3>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-3">
-          <div class="card card-transparent">
-            <div class="card-header ">
-              <div class="card-title">Year 1 Equity
-              </div>
-            </div>
-            <div class="card-block">
-              <h3>
-                <span class="semi-bold"><%= @result[:equity] %></span>
-              </h3>
-            </div>
-          </div>
-        </div>
+          <div class="m-0 row card-block">
+                
+                <div class="col-lg-8 sm-no-padding">
+                  <div class="card card-transparent">
+                    <div class="card-block no-padding">
+                      <div id="card-advance" class="card card-default">
+                        <div class="card-header  ">
+                          <div class="card-title">Tax Credits
+                          </div>
+                        </div>
+                        <div class="card-block">
+                          <h3>
+                  <span class="semi-bold">$<%= @result[:annual_tax] %></span> per annum</h3>
+                          <p>We have crafted Pages Cards to suit any use case. Add a maximize button <i class="pg-fullscreen"></i> into your Cards controls bar to make the Cards go full-screen. This will come handy if you want to show lot of content inside a Cards and want to give the content some room to breath</p>
+                          <br>
+                          <div>
+    
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="p-r-30">
+                    <h3>Want more?</h3>
+                    <br>
+                    <p>Is there a feature / calculation you'd like to see in this? Shoot me a quick message on facebook messenger below and I'll see if we can build it in. <div class="mcwidget-embed" data-widget-id="1791710"></div>
 
-        <div class="col-lg-3">
-          <div class="card card-transparent">
-            <div class="card-header ">
-              <div class="card-title">Annual Tax Credit
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
-            <div class="card-block">
-              <h3>
-                <span class="semi-bold"><%= @result[:annual_tax] %></span>
-              </h3>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+            <!-- END card -->
