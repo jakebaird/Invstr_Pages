@@ -22,11 +22,12 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
-gem 'pages-rails' ,:git => 'https://github.com/jakebaird/pages-rails.git'
+gem 'pages-rails' ,:git => 'https://github.com/jakebaird/pages-railsm.git'
 gem 'high_voltage', '~> 3.0'
 gem 'google_drive'
 gem 'autonumeric-rails'
 gem 'puma'
+gem 'bundler' '1.16.1'
 
 #,:git => 'https://github.com/revoxltd/pages-rails.git'
 # Use ActiveModel has_secure_password
