@@ -50,8 +50,10 @@
               <span class="hint-text">Copyright © <%= Time.current.year %></span>
               <span class="font-montserrat">invst.co</span>.
               <span class="hint-text">All rights reserved.</span>
-              <span class="sm-block"><a href="#" class="m-l-10 m-r-10">Terms of use</a> | <a href="#" class="m-l-10">Privacy Policy</a>
+              <span class="sm-block"><a class="m-l-10 m-r-10"><%= link_to "Terms of use", terms_path %> | <a class="m-l-10"><%= link_to "Privacy Policy", privacy_path %></a>
                         </span>
+
+                       
             </p>
             <p class="small no-margin pull-right sm-pull-reset">
               <a href="http://reif.com.au" target= "_blank">⚡ Powered by REIF</a>
