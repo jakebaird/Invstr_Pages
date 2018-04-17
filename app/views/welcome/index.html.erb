@@ -1,115 +1,113 @@
   <div class="page-content-wrapper ">
-        <!-- START PAGE CONTENT -->
-        <div class="content ">
-          <!-- START CONTAINER FLUID -->
-          <div class=" container-fluid   container-fixed-lg">
-            <!-- START BREADCRUMB -->
- <div class="row">
-              <div class="col-xl-5 col-lg-8 ">
-                <!-- START card -->
-                <div class="card card-transparent">
-                  <div class="card-header ">
-                    <div class="card-title">
-                    </div>
-                  </div>
-                  <div class="card-block">
-                    <h3> <b>Investment Property Analysis</b> <br>
-             Analyse your Cash flow, tax benefits, yield and Equity</h3>
-                    <p> Btw, it's free 😉
-                      <br> </p>
-                    <br>
-                    
-                  </div>
-                </div>
-                
-              </div>
-              <div class="col-xl-7 col-lg-5">
-                
-                <!-- START card -->
-                <div class="card card-transparent">
-                  <div class="card-block">
-                    <%= form_for(@property_invesment_form, url: results_path, method: :post, html: {id: 'form-personal'}) do |f| %>
-                      <div class="row clearfix">
-                        <div class="col-md-12">
-                          <div class="form-group form-group-default required">
-                            <label>Property Value</label>
-                            <%= f.text_field :property_value, class: 'form-control', required: true, data: {autonumeric: true} %>
-                          </div>
-                        </div>
-                      </div>
-                        <div class="row">
-                        <div class="col-md-12">
-                          <div class="form-group form-group-default">
-                            <label>Loan Amount</label>
-                            <%= f.text_field :loan_amount, class: 'form-control', required: true, data: {autonumeric: true} %>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="row clearfix">
-                        <div class="col-md-6">
-                          <div class="form-group form-group-default input-group">
-                            <div class="form-input-group">
-                              <label>Interest Rate</label>
-                              <%= f.number_field :interest_rate, class: 'form-control', required: true, placehoder: '3.99', step: 0.01 %>
-                            </div>
-                            <div class="input-group-addon d-flex ">
-                              %
-                            </div>
-                            </div>
-                          </div>
-
-                            <div class="col-md-6">
-                          <div class="form-group form-group-default input-group">
-                            <div class="form-input-group">
-                              <label>Capital Growth</label>
-                              <%= f.number_field :capital_growth, class: 'form-control', required: true, placehoder: '3.00', step: 0.01 %>
-                            </div>
-                            <div class="input-group-addon d-flex ">
-                              %
-                            </div>
-                          </div>
-                      </div>
-                          </div>
-                     <div class="row">
-                        <div class="col-md-12">
-                          <div class="form-group form-group-default input-group">
-                            <div class="form-input-group">
-                              <label>Your Taxable Income</label>
-                              <%= f.text_field :taxable_income, class: 'form-control', required: true, placehoder: '$75,000', data: {autonumeric: true} %>
-                            </div>
-                            <div class="input-group-addon d-flex ">
-                              p/a
-                            </div>
-                          </div>
-                        </div>
-                    
-                    </div>
-                      <div class="row">
-                        <div class="col-md-12">
-                          <div class="form-group form-group-default input-group">
-                            <div class="form-input-group">
-                              <label>Proposed Rent</label>
-                              <%= f.text_field :proposed_rent, class: 'form-control', required: true, placehoder: '400', data: {autonumeric: true} %>
-                            </div>
-                            <div class="input-group-addon d-flex ">
-                              p/w
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="row">
-                    </div>
-                      <p class="pull-right">
-                        I agree to the <%= link_to "Terms", terms_path %> and <%= link_to "Privacy", privacy_path %>.
-                      </p>
-                     
-                      <div class="clearfix"></div><p class="pull-right">
-                     <button class="btn btn-primary" type="submit"><b>Analyse Property</b></button>
-                    <% end %>
-                  </div>
-                </div>
+    <!-- START PAGE CONTENT -->
+    <div class="content ">
+      <!-- START BREADCRUMB -->
+      <div class="row">
+        <div class="col-xl-5 col-lg-8 ">
+          <!-- START card -->
+          <div class="card card-transparent">
+            <div class="card-header ">
+              <div class="card-title">
               </div>
             </div>
+            <div class="card-block">
+              <h3> <b>Investment Property Analysis</b> <br>
+              Calculate your repayments, cash flow, tax credits, yield and equity</h3>
+              <p> btw, it's free 😉
+                <br> </p>
+                <br>
+
+              </div>
+            </div>
+
           </div>
-        </div>
-      </div>
+          <div class="col-xl-7 col-lg-5">
+
+            <!-- START card -->
+            <div class="card card-transparent">
+              <div class="card-block">
+                <%= form_for(@property_invesment_form, url: results_path, method: :post, html: {id: 'form-personal'}) do |f| %>
+                <div class="row clearfix">
+                  <div class="col-md-12">
+                    <div class="form-group form-group-default required">
+                      <label>Property Value</label>
+                      <%= f.text_field :property_value, class: 'form-control', required: true, data: {autonumeric: true} %>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="form-group form-group-default">
+                      <label>Loan Amount</label>
+                      <%= f.text_field :loan_amount, class: 'form-control', required: true, data: {autonumeric: true} %>
+                    </div>
+                  </div>
+                </div>
+                <div class="row clearfix">
+                  <div class="col-md-6">
+                    <div class="form-group form-group-default input-group">
+                      <div class="form-input-group">
+                        <label>Interest Rate</label>
+                        <%= f.number_field :interest_rate, class: 'form-control', required: true, placehoder: '3.99', step: 0.01 %>
+                      </div>
+                      <div class="input-group-addon d-flex ">
+                        %
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <div class="form-group form-group-default input-group">
+                      <div class="form-input-group">
+                        <label>Capital Growth</label>
+                        <%= f.number_field :capital_growth, class: 'form-control', required: true, placehoder: '3.00', step: 0.01 %>
+                      </div>
+                      <div class="input-group-addon d-flex ">
+                        %
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="form-group form-group-default input-group">
+                      <div class="form-input-group">
+                        <label>Your Taxable Income</label>
+                        <%= f.text_field :taxable_income, class: 'form-control', required: true, placehoder: '$75,000', data: {autonumeric: true} %>
+                      </div>
+                      <div class="input-group-addon d-flex ">
+                        p/a
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="form-group form-group-default input-group">
+                      <div class="form-input-group">
+                        <label>Proposed Rent</label>
+                        <%= f.text_field :proposed_rent, class: 'form-control', required: true, placehoder: '400', data: {autonumeric: true} %>
+                      </div>
+                      <div class="input-group-addon d-flex ">
+                        p/w
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                </div>
+                <p class="pull-right">
+                  I agree to the <%= link_to "Terms", terms_path %> and <%= link_to "Privacy", privacy_path %>.
+                </p>
+
+                <div class="clearfix"></div><p class="pull-right">
+                 <button class="btn btn-primary" type="submit"><b>Analyse Property</b></button>
+                 <% end %>
+               </div>
+             </div>
+           </div>
+         </div>
+       </div>
+     </div>
+   </div>
